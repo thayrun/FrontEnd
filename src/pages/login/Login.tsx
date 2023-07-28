@@ -28,6 +28,8 @@ function Login() {
             value={nome}
             onChange={(event) => setNome(event.target.value)}
           />
+          <label htmlFor="senha">Senha</label>
+          <input className="border-2 border-slate-700 rounded p-2" type="text" />
         </div>
         <button type='submit' className="my-4 rounded bg-green-800
          hover:bg-indigo-900 text-white w-1/2 py-2 flex justify-center">
