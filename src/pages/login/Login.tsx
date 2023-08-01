@@ -36,7 +36,15 @@ function Login() {
           <span>Entrar</span>
         </button>
 
+        <hr className="border-slate-800 w-full" />
+        
+        <p> 
+          Ainda não tem uma conta?{' '}
+        </p>
+
       </form>
+
+      <div className="fundoLogin hidden lg:block"></div>
 
     </div>
   );
