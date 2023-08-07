@@ -8,6 +8,8 @@ import Home from './pages/home/Home';
 import Sobre from './pages/sobre/Sobre'
 import Cadastro from './pages/cadastro/Cadastro';
 import { AuthProvider } from './contexts/AuthContext';
+import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias'
+
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
               <Route path="/sobre" element={<Sobre />} />
+              <Route path="/categorias" element={<ListaCategorias />} />
             </Routes>
           </div>
           <Footer />
