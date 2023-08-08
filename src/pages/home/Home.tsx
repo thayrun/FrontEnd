@@ -1,7 +1,6 @@
 
 import './Home.css';
 import homeLogo from '../../assets/images/Home.jpg'
-import ListaProdutos from '../../components/produtos/listaProdutos/ListaProdutos';
 import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
 
 function Home() {
@@ -28,7 +27,6 @@ function Home() {
             </div>
           </div>
         </div>
-        <ListaProdutos />
       </>
     );
 }
