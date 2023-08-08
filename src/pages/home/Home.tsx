@@ -2,6 +2,7 @@
 import './Home.css';
 import homeLogo from '../../assets/images/Home.jpg'
 import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
+import {Link} from 'react-router-dom';
 
 function Home() {
     return (
@@ -15,9 +16,11 @@ function Home() {
               <div className="flex justify-around gap-4">
 
                 <ModalProduto />
-                <button className='rounded bg-white text-lime-950 py-2 px-4'>Ver Loja</button>
                 
-                <button className='rounded bg-white text-lime-950 py-2 px-4'>Cadastre seus produtos!</button>
+                <Link to='/produtos'>
+                  <button className='rounded bg-white text-lime-950 py-2 px-4'>Ver Loja</button>
+                </Link>
+                
               </div>
             </div>
   
