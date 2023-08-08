@@ -1,4 +1,4 @@
-import Produtos  from "./Produtos";
+import Produtos  from "./Produto";
 
 export default interface Usuario {
   id: number;
