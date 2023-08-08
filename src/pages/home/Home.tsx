@@ -1,6 +1,8 @@
-import React from 'react';
-import homeLogo from '../../assets/images/Home.jpg'
 
+import './Home.css';
+import homeLogo from '../../assets/images/Home.jpg'
+import ListaProdutos from '../../components/produtos/listaProdutos/ListaProdutos';
+import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
 
 function Home() {
     return (
@@ -12,10 +14,11 @@ function Home() {
               <p className='text-xl'>Encontre seus produtos orgânicos</p>
   
               <div className="flex justify-around gap-4">
-              
-                <button className='rounded bg-white text-lime-950 py-2 px-4'>Ver produtos</button>
 
-                <button className='rounded bg-white text-lime-950 py-2 px-4'>Cadastre sua loja!</button>
+                <ModalProduto />
+                <button className='rounded bg-white text-lime-950 py-2 px-4'>Ver Loja</button>
+                
+                <button className='rounded bg-white text-lime-950 py-2 px-4'>Cadastre seus produtos!</button>
               </div>
             </div>
   
@@ -25,7 +28,7 @@ function Home() {
             </div>
           </div>
         </div>
-      
+        <ListaProdutos />
       </>
     );
 }
