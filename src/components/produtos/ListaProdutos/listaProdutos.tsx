@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produtos from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
-import CardProdutos from '../cardProdutos/CardProdutos';
+import CardProdutos from '../CardProdutos/cardProdutos';
 
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produtos[]>([]);
@@ -23,7 +23,7 @@ function ListaProdutos() {
 
   async function buscarProdutos() {
     try {
-      await buscar('/postagens', setProdutos, {
+      await buscar('/produtos', setProdutos, {
         headers: {
           Authorization: token,
         },
