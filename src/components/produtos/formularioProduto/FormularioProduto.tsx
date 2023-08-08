@@ -148,7 +148,7 @@ function FormularioProduto() {
             value={produto.nome}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="text"
-            placeholder="nome"
+            placeholder="Laranja, beterraba, etc..."
             name="nome"
             required
             className="border-2 border-slate-700 rounded p-2"
@@ -160,7 +160,7 @@ function FormularioProduto() {
             value={produto.preco}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="number"
-            placeholder="preco"
+            placeholder="preço"
             name="preco"
             required
             className="border-2 border-slate-700 rounded p-2"
@@ -172,8 +172,8 @@ function FormularioProduto() {
             value={produto.descricao}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="text"
-            placeholder="descricao"
-            name="texto"
+            placeholder="bandeja de morango, cacho de uva, etc..."
+            name="descricao"
             required
             className="border-2 border-slate-700 rounded p-2"
           />
@@ -185,7 +185,7 @@ function FormularioProduto() {
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="number"
             placeholder="quantidade"
-            name="number"
+            name="quantidade"
             required
             className="border-2 border-slate-700 rounded p-2"
           />
