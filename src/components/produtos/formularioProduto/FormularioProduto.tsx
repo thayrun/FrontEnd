@@ -49,7 +49,7 @@ function FormularioProduto() {
   }
 
   async function buscarCategorias() {
-    await buscar('/categorias', setCategoria, {
+    await buscar('/categorias', setCategorias, {
       headers: {
         Authorization: token,
       },
@@ -148,8 +148,8 @@ function FormularioProduto() {
             value={produto.nome}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="text"
-            placeholder="Nome"
-            name="Nome"
+            placeholder="nome"
+            name="nome"
             required
             className="border-2 border-slate-700 rounded p-2"
           />
@@ -160,8 +160,8 @@ function FormularioProduto() {
             value={produto.preco}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="number"
-            placeholder="Preco"
-            name="number"
+            placeholder="preco"
+            name="preco"
             required
             className="border-2 border-slate-700 rounded p-2"
           />
@@ -172,7 +172,7 @@ function FormularioProduto() {
             value={produto.descricao}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="text"
-            placeholder="Descricao"
+            placeholder="descricao"
             name="texto"
             required
             className="border-2 border-slate-700 rounded p-2"
@@ -184,7 +184,7 @@ function FormularioProduto() {
             value={produto.quantidade}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             type="number"
-            placeholder="Quantidade"
+            placeholder="quantidade"
             name="number"
             required
             className="border-2 border-slate-700 rounded p-2"
