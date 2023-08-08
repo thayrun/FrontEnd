@@ -7,7 +7,7 @@ function Home() {
     return (
       <>
       <div className="flex justify-center bg-geral">
-        <div className='container grid grid-cols-2 text-white'>
+        <div className='container grid text-lime-950'>
           <div className="flex flex-col gap-4 items-center justify-center py-4">
             <h2 className='text-5xl font-bold text-orange-500'>Seja bem vinde!</h2>
             <p className='text-xl'>Encontre seus produtos orgânicos</p>
