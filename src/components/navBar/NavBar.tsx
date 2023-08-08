@@ -32,7 +32,7 @@ function Navbar() {
                         <Link to='/home' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Inicio</Link>
                         <Link to='/login' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Login</Link>
                         <div className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Perfil</div>
-                        <div className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Produtos</div>
+                        <Link to='/produtos' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Produtos</Link>
                         <Link to='/categorias' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Categorias</Link>
                         <Link to='/cadastroCategoria'className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Cadastrar Categoria</Link>
                         <Link to='/sobre' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Sobre</Link>
