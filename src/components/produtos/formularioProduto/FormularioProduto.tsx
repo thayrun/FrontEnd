@@ -28,6 +28,7 @@ function FormularioProduto() {
     preco: 0,
     descricao: '',
     quantidade: 0,
+    foto: '',
     categoria: null,
     usuario: null,
   });
@@ -139,10 +140,11 @@ function FormularioProduto() {
 
   return (
     <div className="container flex flex-col mx-auto items-center">
-      <h1 className="text-4xl text-center my-8">{id !== undefined ? 'Editar Produto' : 'Cadastrar Produto'}</h1>
+      <h1 className="text-2xl text-center my-4">{id !== undefined ? 'Editar Produto' : 'Cadastrar Produto'}</h1>
 
-      <form onSubmit={gerarNovoProduto} className="flex flex-col w-1/2 gap-4">
-        <div className="flex flex-col gap-2">
+      <form onSubmit={gerarNovoProduto} className="flex flex-wrap items-center justify-center md:w-full gap-4 ">
+
+        <div className="flex flex-col gap-2 lg:w-2/5">
           <label htmlFor="nome">Nome do produto</label>
           <input
             value={produto.nome}
@@ -154,7 +156,7 @@ function FormularioProduto() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 lg:w-2/5">
           <label htmlFor="preco">Preço do Produto</label>
           <input
             value={produto.preco}
@@ -166,7 +168,7 @@ function FormularioProduto() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 lg:w-2/5">
           <label htmlFor="descricao">Descrição do Produto</label>
           <input
             value={produto.descricao}
@@ -178,7 +180,7 @@ function FormularioProduto() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 lg:w-2/5">
           <label htmlFor="quantidade">Quantidade do Produto</label>
           <input
             value={produto.quantidade}
@@ -190,7 +192,19 @@ function FormularioProduto() {
             className="border-2 border-slate-700 rounded p-2"
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 lg:w-2/5">
+          <label htmlFor="foto">Foto do Produto</label>
+          <input
+            value={produto.foto}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
+            type="text"
+            placeholder="Foto do produto"
+            name="foto"
+            required
+            className="border-2 border-slate-700 rounded p-2"
+          />
+        </div>
+        <div className="flex flex-col gap-2 lg:w-2/5">
           <p>Categoria do produto</p>
           <select name="categoria" id="categoria" className='border p-2 border-slate-800 rounded' onChange={(e) => buscarCategoriaPorId(e.currentTarget.value)}>
             <option value="" selected disabled>Selecione uma categoria</option>

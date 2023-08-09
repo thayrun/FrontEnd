@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produtos from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
-import CardProdutos from '../cardProdutos/CardProdutos';
+import CardProduto from '../CardProdutos/cardProdutos';
 
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produtos[]>([]);
@@ -53,7 +53,7 @@ function ListaProdutos() {
       )}
       <div className='container mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {produtos.map((produto) => (
-          <CardProdutos key={produto.id} produto={produto} />
+          <CardProduto key={produto.id} produto={produto} />
         ))}
       </div>
     </>
