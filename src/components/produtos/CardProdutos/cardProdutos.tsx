@@ -19,6 +19,7 @@ function CardProduto({ produto }: CardProdutoProps) {
           <p>Descrição: {produto.descricao}</p>
           <p>Preço: {produto.preco}</p>
           <p>Quantidade: {produto.quantidade}</p>
+          <p>Foto: <img src={produto.foto} className='h-12 rounded-full' alt="Foto do Produto" /></p>
           {/* Lógica pra Exibir a Categoria no Card*/}
           {produto.categoria && <p>Categoria: {produto.categoria.nome}</p>}
         </div>
