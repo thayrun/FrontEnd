@@ -14,11 +14,13 @@ import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCa
 import ListaProdutos from './components/produtos/listaProdutos/listaProdutos';
 import FormularioProduto from './components/produtos/formularioProduto/FormularioProduto';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
+import Carrinho from './pages/Cart/Carrinho';
+import { Provider } from './contexts/CartContext'
 
 function App() {
   return (
     <>
-
+        <Provider>
         <AuthProvider>
         <BrowserRouter>
           <Navbar />
@@ -38,11 +40,13 @@ function App() {
               <Route path="/editarProduto/:id" element={<FormularioProduto />} />
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
 
+              <Route path="/carrinho" element={<Carrinho />} />
             </Routes>
           </div>
           <Footer />
         </BrowserRouter>
         </AuthProvider>
+        </Provider>
 
     </>
   );
