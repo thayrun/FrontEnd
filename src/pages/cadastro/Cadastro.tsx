@@ -112,9 +112,9 @@ function Cadastro() {
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.tipo}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-             
             />
           </div>
+          
           <div className="flex flex-col w-full">
             <label htmlFor="foto">Foto</label>
             <input
