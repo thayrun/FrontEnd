@@ -7,6 +7,8 @@ import Popup from 'reactjs-popup';
 import './ModalProduto.css'
 import ListaProdutos from '../listaProdutos/listaProdutos';
 
+
+
 function ModalProduto() {
   return (
     <>

@@ -1,9 +1,26 @@
 
 import './Home.css';
 import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
-import {Link} from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../contexts/AuthContext'
+import React, { useContext } from 'react'
 
 function Home() {
+  let navigate = useNavigate()
+
+  const { usuario, handleLogout } = useContext(AuthContext)
+
+  function logout() {
+    handleLogout()
+    alert('Usuário deslogado com sucesso')
+    navigate('/login')
+  }
+
+  let homeLoja = (
+    <>
+      <ModalProduto />
+    </>
+  )
     return (
       <>
       <div className="flex justify-center bg-geral">
@@ -14,8 +31,9 @@ function Home() {
   
               <div className="flex justify-around gap-4">
 
-                <ModalProduto />
-                
+               
+              {usuario.tipo == "CNPJ" ? homeLoja : <></>}
+
                 <Link to='/produtos'>
                   <button className='rounded bg-white text-lime-950 py-2 px-4'>Ver Loja</button>
                 </Link>
