@@ -1,5 +1,5 @@
 
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { AuthContext } from '../../../contexts/AuthContext'
 import { useContext } from 'react'
 
@@ -11,17 +11,9 @@ interface CardProdutoProps {
 
 function CardProduto({ produto }: CardProdutoProps) {
 
-  let navigate = useNavigate()
 
-  const { usuario, handleLogout } = useContext(AuthContext)
+  const { usuario } = useContext(AuthContext)
 
-  function logout() {
-    handleLogout()
-    alert('Usuário deslogado com sucesso')
-    navigate('/login')
-  }
-
-  let navbarComponent
 
   let cardProdutosLoja = (
     <>

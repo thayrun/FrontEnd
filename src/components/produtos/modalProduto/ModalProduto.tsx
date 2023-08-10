@@ -1,4 +1,3 @@
-import React from 'react';
 import FormularioProduto from '../formularioProduto/FormularioProduto';
 import { AuthContext } from '../../../contexts/AuthContext'
 import { useContext } from 'react'
@@ -8,6 +7,7 @@ import Popup from 'reactjs-popup';
 
 import './ModalProduto.css'
 import ListaProdutos from '../listaProdutos/listaProdutos';
+import Carrinho from '../../../pages/Cart/Carrinho';
 
 
 
@@ -36,12 +36,10 @@ function ModalProduto() {
       <Popup 
       trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Ver Carrinho</button>} modal>
         <div>
-          <ListaProdutos /> 
+          <ListaProdutos />  
         </div>
       </Popup>
-      {usuario.tipo == "CNPJ" ? modalLoja : <></>}
     </>
-    
   );
 }
 

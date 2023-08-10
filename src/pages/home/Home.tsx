@@ -1,20 +1,10 @@
 
 import './Home.css';
 import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
-import { Link, useNavigate } from 'react-router-dom'
-import { AuthContext } from '../../contexts/AuthContext'
-import  { useContext } from 'react'
+import { Link} from 'react-router-dom'
+
 
 function Home() {
-  let navigate = useNavigate()
-
-  const { usuario, handleLogout } = useContext(AuthContext)
-
-  function logout() {
-    handleLogout()
-    alert('Usuário deslogado com sucesso')
-    navigate('/login')
-  }
 
  
     return (
