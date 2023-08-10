@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
 import { useContext } from 'react'
 import IconCart from '../../assets/images/cesta.png'
+import { toastAlerta } from '../../utils/toastAlerta'
+
 
 
 function Navbar() {
@@ -13,18 +15,11 @@ function Navbar() {
 
   function logout() {
     handleLogout()
-    alert('Usuário deslogado com sucesso')
+    toastAlerta('Usuário deslogado com sucesso', 'info')
     navigate('/login')
   }
 
   let navbarComponent
-
-  let navbarLoja = (
-    <>
-      <Link to='/categorias' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Categorias</Link>
-      <Link to='/cadastroCategoria' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Cadastrar Categoria</Link>
-    </>
-  )
 
   if (usuario.token !== "") {
     navbarComponent = (
@@ -36,14 +31,11 @@ function Navbar() {
           </div>
         </div>
 
-        <div className='w-screen rounded bg-green-900 flex justify-center text-md'>
+        <div className='w-screen bg-green-900 flex justify-center text-md'>
           <div className='flex gap-7 py-3 text-white font-roboto'>
             <Link to='/home' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Inicio</Link>
             <Link to='/perfil' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Perfil</Link>
             <Link to='/produtos' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Produtos</Link>
-
-            {usuario.tipo == "CNPJ" ? navbarLoja : <></>}
-
             <Link to='/sobre' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Sobre</Link>
             <Link to='' onClick={logout} className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Sair</Link>
 

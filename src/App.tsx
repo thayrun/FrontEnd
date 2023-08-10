@@ -17,6 +17,8 @@ import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto'
 import Perfil from './pages/perfil/Perfil';
 import Carrinho from './pages/Cart/Carrinho';
 import { Provider } from './contexts/CartContext'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
 
         <Provider>
         <AuthProvider>
+        <ToastContainer />
         <BrowserRouter>
           <Navbar />
           <div className='min-h-[80vh]'>
