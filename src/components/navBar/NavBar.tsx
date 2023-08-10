@@ -1,7 +1,8 @@
 
 import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
-import React, { useContext } from 'react'
+import { useContext } from 'react'
+import IconCart from '../../assets/images/cesta.png'
 
 
 function Navbar() {
@@ -47,7 +48,13 @@ function Navbar() {
             <Link to='' onClick={logout} className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Sair</Link>
 
             {/* {usuario.tipo == "CNPJ" ? navbarLoja : "Qualquer coisa"} */}
-
+       
+                   {/* Div do Carrinho */}
+                   <div className='absolute top-2 right-4'>
+              <Link to='/carrinho'>
+                <img src={IconCart} alt="icone do carrinho" className='cart-icon cart-icon:hover' />
+              </Link>
+            </div>
           </div>
         </div >
       </>
