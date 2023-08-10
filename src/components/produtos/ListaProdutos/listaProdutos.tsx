@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produtos from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
-import CardProduto from '../CardProdutos/cardProdutos';
+import CardProduto from '../cardProdutos/cardProdutos';
 
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produtos[]>([]);
