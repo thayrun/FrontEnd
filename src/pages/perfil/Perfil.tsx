@@ -6,6 +6,8 @@ import loginLogo from '../../assets/images/perfil.jpg'
 function Perfil() {
   let navigate = useNavigate()
 
+  
+
     const { usuario } = useContext(AuthContext)
 
     useEffect(() => {
@@ -16,7 +18,7 @@ function Perfil() {
     }, [usuario.token])
     
     console.log(JSON.stringify(usuario))
-    
+
   return (
     <div className='container mx-auto mt-4 rounded-2xl overflow-hidden'>
       <img className='w-full h-72 object-cover border-b-8 border-white' src={loginLogo} alt="Capa do Perfil" />
