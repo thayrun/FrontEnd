@@ -9,11 +9,26 @@ interface CardProdutoProps {
   produto: Produtos;
 }
 
+
 function CardProduto({ produto }: CardProdutoProps) {
 
 
-  const { usuario } = useContext(AuthContext)
+  const { usuario, adicionarProduto } = useContext(AuthContext)
 
+  let cardProdutosCliente = (
+    <>
+      <div className="flex">
+        <button
+          className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'
+          
+          onClick={() => adicionarProduto(produto)}
+        >
+          Adicionar ao carrinho
+        </button>
+
+      </div>
+    </>
+  )
 
   let cardProdutosLoja = (
     <>
@@ -24,7 +39,7 @@ function CardProduto({ produto }: CardProdutoProps) {
         <Link to={`/deletarProduto/${produto.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
           <button>Deletar</button>
         </Link>
-        
+
       </div>
     </>
   )
@@ -44,10 +59,13 @@ function CardProduto({ produto }: CardProdutoProps) {
           <p>Foto: <img src={produto.foto} className='h-12 rounded-full' alt="Foto do Produto" /></p>
           {/* Lógica pra Exibir a Categoria no Card*/}
           {produto.categoria && <p>Categoria: {produto.categoria.nome}</p>}
+
           {usuario.tipo == "CNPJ" ? cardProdutosLoja : <></>}
+
+          {usuario.tipo == "CPF" ? cardProdutosCliente : <></>}
         </div>
       </div>
-      
+
     </div>
   );
 }

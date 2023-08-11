@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
 import { Dna } from 'react-loader-spinner';
-import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produtos from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
@@ -10,17 +9,18 @@ import { toastAlerta } from '../../../utils/toastAlerta'
 function ListaProdutos() {
   const [produtos, setProdutos] = useState<Produtos[]>([]);
 
-  let navigate = useNavigate();
+    // não estamos utilizando por causa do GetProdutos sem login, caso queira usar importar o useNavigate
+  // let navigate = useNavigate();
 
   const { usuario, handleLogout } = useContext(AuthContext);
   const token = usuario.token;
 
-  useEffect(() => {
-    if (token === '') {
-      toastAlerta('Você precisa estar logado', 'info');
-      navigate('/');
-    }
-  }, [token]);
+  // useEffect(() => {
+  //   if (token === '') {
+  //     toastAlerta('Você precisa estar logado', 'info');
+  //     navigate('/');
+  //   }
+  // }, [token]);
 
   async function buscarProdutos() {
     try {
