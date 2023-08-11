@@ -1,11 +1,26 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { AuthContext } from '../../contexts/AuthContext'
+import { useNavigate } from 'react-router-dom';
+import { toastAlerta } from '../../utils/toastAlerta';
 
 
 
 
 function Carrinho() {
+
+    let navigate = useNavigate();
+
+    const { usuario } = useContext(AuthContext);
+    const token = usuario.token
+
     const { items, limparCart, removerProduto } = useContext(AuthContext)
+
+    useEffect(() => {
+        if (token === '') {
+            toastAlerta('Você precisa estar logado', 'info');
+            navigate('/login');
+        }
+    }, [token]);
 
     return (
         <div>
