@@ -3,7 +3,7 @@ import { Dna } from 'react-loader-spinner';
 import { AuthContext } from '../../../contexts/AuthContext';
 import Produtos from '../../../models/Produto';
 import { buscar } from '../../../services/Service';
-import CardProduto from '../cardProdutos/cardProdutos';
+import CardProduto from '../CardProdutos/cardProdutos';
 import { toastAlerta } from '../../../utils/toastAlerta'
 
 function ListaProdutos() {
