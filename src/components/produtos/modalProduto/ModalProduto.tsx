@@ -7,18 +7,13 @@ import 'reactjs-popup/dist/index.css';
 import Popup from 'reactjs-popup';
 
 import './ModalProduto.css'
-import ListaProdutos from '../listaProdutos/listaProdutos';
+import Carrinho from '../../../pages/Cart/Carrinho';
 
 
 
 function ModalProduto() {
 
-  
-
   const { usuario } = useContext(AuthContext)
-
-
-
 
   let modalLoja = (
     <>
@@ -36,7 +31,7 @@ function ModalProduto() {
       <Popup 
       trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Ver Carrinho</button>} modal>
         <div>
-          <ListaProdutos /> 
+          <Carrinho /> 
         </div>
       </Popup>
       {usuario.tipo == "CNPJ" ? modalLoja : <></>}
