@@ -69,11 +69,13 @@ export function AuthProvider({ children }: AuthProviderProps) {
     const quantidadeItems = items.length
 
     function adicionarProduto(produto: Produto) {
+        toastAlerta ('Produto adicionado ao carrinho', 'sucesso');
         // Essa sintaxe guarda as info anteriores do State e atualiza com os novos dados(objetos)
         setItems(state => [...state, produto])
     }
 
     function removerProduto(produtoId: number) {
+        toastAlerta('Produto deletado com sucesso', 'sucesso');
         // Usamos a função filter, com ela fazemos um Filtro no Array usando uma condição
         const coffeeExistsInCart = items.filter(
             (item) => item.id !== produtoId)
@@ -83,9 +85,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
 
     function limparCart() {
-        alert("Compra Efetuada com Sucesso")
+        toastAlerta('Compra efetuada com sucesso', 'sucesso');
         setItems([])
     }
+
+    
 
     return (
         <AuthContext.Provider value={{ usuario, handleLogin, handleLogout, isLoading, adicionarProduto, removerProduto, limparCart, items, quantidadeItems }}>

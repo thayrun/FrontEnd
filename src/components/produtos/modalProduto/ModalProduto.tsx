@@ -15,28 +15,30 @@ function ModalProduto() {
 
   const { usuario } = useContext(AuthContext)
 
+
   let modalLoja = (
     <>
-    <Popup 
-      trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Novo Produto</button>} modal>
+      <Popup
+        trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Novo Produto</button>} modal>
         <div>
-          <FormularioProduto /> 
+          <FormularioProduto />
         </div>
       </Popup>
-    
+
     </>
   )
+
   return (
     <>
-      <Popup 
-      trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Ver Carrinho</button>} modal>
+      <Popup
+        trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Ver Carrinho</button>} modal>
         <div>
-          <Carrinho /> 
+          <Carrinho />
         </div>
       </Popup>
       {usuario.tipo == "CNPJ" ? modalLoja : <></>}
     </>
-    
+
   );
 }
 
