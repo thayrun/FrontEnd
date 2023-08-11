@@ -1,4 +1,7 @@
-import { Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom'
+import { AuthContext } from '../../../contexts/AuthContext'
+import { useContext } from 'react'
 
 import Produtos from '../../../models/Produto';
 
@@ -7,6 +10,25 @@ interface CardProdutoProps {
 }
 
 function CardProduto({ produto }: CardProdutoProps) {
+
+
+  const { usuario } = useContext(AuthContext)
+
+
+  let cardProdutosLoja = (
+    <>
+      <div className="flex">
+        <Link to={`/editarProduto/${produto.id}`} className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
+          <button>Editar</button>
+        </Link>
+        <Link to={`/deletarProduto/${produto.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
+          <button>Deletar</button>
+        </Link>
+        
+      </div>
+    </>
+  )
+
   return (
     <div className='border-slate-900 border flex flex-col rounded overflow-hidden justify-between'>
       <div>
@@ -19,18 +41,13 @@ function CardProduto({ produto }: CardProdutoProps) {
           <p>Descrição: {produto.descricao}</p>
           <p>Preço: {produto.preco}</p>
           <p>Quantidade: {produto.quantidade}</p>
+          <p>Foto: <img src={produto.foto} className='h-12 rounded-full' alt="Foto do Produto" /></p>
           {/* Lógica pra Exibir a Categoria no Card*/}
           {produto.categoria && <p>Categoria: {produto.categoria.nome}</p>}
+          {usuario.tipo == "CNPJ" ? cardProdutosLoja : <></>}
         </div>
       </div>
-      <div className="flex">
-        <Link to={`/editarProduto/${produto.id}`} className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
-          <button>Editar</button>
-        </Link>
-        <Link to={`/deletarProduto/${produto.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
-          <button>Deletar</button>
-        </Link>
-      </div>
+      
     </div>
   );
 }

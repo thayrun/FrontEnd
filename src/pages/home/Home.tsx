@@ -1,9 +1,12 @@
 
 import './Home.css';
 import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
-import {Link} from 'react-router-dom';
+import { Link} from 'react-router-dom'
+
 
 function Home() {
+
+ 
     return (
       <>
       <div className="flex justify-center bg-geral">
@@ -14,8 +17,10 @@ function Home() {
   
               <div className="flex justify-around gap-4">
 
-                <ModalProduto />
-                
+              <ModalProduto />
+              
+            
+
                 <Link to='/produtos'>
                   <button className='rounded bg-white text-lime-950 py-2 px-4'>Ver Loja</button>
                 </Link>
