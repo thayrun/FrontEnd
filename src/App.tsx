@@ -1,5 +1,4 @@
 import './App.css';
-
 import Navbar from './components/navBar/NavBar';
 import Footer from './components/footer/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -15,8 +14,7 @@ import ListaProdutos from './components/produtos/listaProdutos/listaProdutos';
 import FormularioProduto from './components/produtos/formularioProduto/FormularioProduto';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
 import Perfil from './pages/perfil/Perfil';
-import Carrinho from './pages/cart/Carrinho';
-import { Provider } from './contexts/CartContext'
+import Carrinho from './pages/Cart/Carrinho';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -24,8 +22,7 @@ function App() {
   return (
     <>
 
-        <Provider>
-        <AuthProvider>
+      <AuthProvider>
         <ToastContainer />
         <BrowserRouter>
           <Navbar />
@@ -50,8 +47,7 @@ function App() {
           </div>
           <Footer />
         </BrowserRouter>
-        </AuthProvider>
-        </Provider>
+      </AuthProvider>
 
     </>
   );
