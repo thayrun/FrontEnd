@@ -10,7 +10,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias'
 import FormularioCategoria from './components/categorias/formularioCategoria/FormularioCategoria';
 import DeletarCategoria from './components/categorias/deletarCategoria/DeletarCategoria';
-import ListaProdutos from './components/produtos/listaProdutos/listaProdutos';
+import ListaProdutos from './components/produtos/ListaProdutos/listaProdutos'
 import FormularioProduto from './components/produtos/formularioProduto/FormularioProduto';
 import DeletarProduto from './components/produtos/deletarProduto/DeletarProduto';
 import Perfil from './pages/perfil/Perfil';
