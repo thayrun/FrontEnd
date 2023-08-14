@@ -15,6 +15,8 @@ function CardProduto({ produto }: CardProdutoProps) {
 
   const { usuario, adicionarProduto } = useContext(AuthContext)
 
+  console.log(usuario)
+
   let cardProdutosCliente = (
     <>
       <div className="flex">
