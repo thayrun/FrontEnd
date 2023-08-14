@@ -108,14 +108,16 @@ function Cadastro() {
           <div>
             <p>Selecione um tipo:</p>
           
-            <input type="radio" 
+            <input
+            type="radio" 
             id="tipo" 
             name="tipo" 
             value="CPF"
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
             <label>CPF</label><br/>
 
-            <input type="radio" 
+            <input 
+            type="radio" 
             id="tipo" 
             name="tipo" 
             value="CNPJ"
@@ -128,12 +130,12 @@ function Cadastro() {
           <div className="flex flex-col w-full">
             <label htmlFor="foto">Foto</label>
             <input
-              type="file" // Alterado para type="file"
+              type="text"
               id="foto"
               name="foto"
+              placeholder="Foto"
               className="border-2 border-slate-700 rounded p-2"
-              accept="image/*" // Define que somente arquivos de imagem são permitidos
-              value={usuario.foto}
+              value={usuario.foto} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
