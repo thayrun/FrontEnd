@@ -71,11 +71,13 @@ function Cadastro() {
     }
   }
 
+  console.log(usuario)
 
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold">
         <div className="fundoCadastro hidden lg:block"></div>
+        
         <form className='flex justify-center items-center flex-col w-2/3 gap-3' onSubmit={cadastrarNovoUsuario}>
           <h2 className='text-slate-900 text-5xl'>Cadastre-se</h2>
           <div className="flex flex-col w-full">
@@ -88,8 +90,6 @@ function Cadastro() {
               className="border-2 border-slate-700 rounded p-2"
               value={usuario.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-
-
             />
           </div>
           <div className="flex flex-col w-full">
@@ -105,51 +105,24 @@ function Cadastro() {
             />
           </div>
 
+          <div>
+            <p>Selecione um tipo:</p>
+          
+            <input type="radio" 
+            id="tipo" 
+            name="tipo" 
+            value="CPF"
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)} />
+            <label>CPF</label><br/>
 
-          <div className="flex flex-col w-full">
-            <label htmlFor="tipo">Documento</label>
-            <select
-              id="tipo"
-              name="tipo"
-              className="border-2 border-slate-700 rounded p-2"
-              value={tipoSelecionado}
-              onChange={(e: ChangeEvent<HTMLSelectElement>) => setTipoSelecionado(e.target.value)}
-            >
-              <option value="">Escolha um tipo</option>
-              <option value="CPF">CPF</option>
-              <option value="CNPJ">CNPJ</option>
-            </select>
+            <input type="radio" 
+            id="tipo" 
+            name="tipo" 
+            value="CNPJ"
+            onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}/>
+              <label>CNPJ</label><br />
+
           </div>
-
-          {tipoSelecionado === "CPF" && (
-            <div className="flex flex-col w-full">
-              <label htmlFor="cpf">CPF</label>
-              <input
-                type="text"
-                id="cpf"
-                name="tipo"
-                placeholder="CPF"
-                className="border-2 border-slate-700 rounded p-2"
-                value={usuario.tipo}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-              />
-            </div>
-          )}
-
-          {tipoSelecionado === "CNPJ" && (
-            <div className="flex flex-col w-full">
-              <label htmlFor="cnpj">CNPJ</label>
-              <input
-                type="text"
-                id="cnpj"
-                name="tipo"
-                placeholder="CNPJ"
-                className="border-2 border-slate-700 rounded p-2"
-                value={usuario.tipo}
-                onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
-              />
-            </div>
-          )}
 
 
           <div className="flex flex-col w-full">
@@ -161,7 +134,7 @@ function Cadastro() {
               className="border-2 border-slate-700 rounded p-2"
               accept="image/*" // Define que somente arquivos de imagem são permitidos
               value={usuario.foto}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}             
+              onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
           </div>
 
@@ -199,6 +172,7 @@ function Cadastro() {
             </button>
           </div>
         </form>
+
       </div>
     </>
   )
