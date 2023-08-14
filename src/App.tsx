@@ -5,10 +5,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './pages/login/Login'
 import Home from './pages/home/Home';
 import Sobre from './pages/sobre/Sobre'
-<<<<<<< HEAD
-import { AuthProvider } from './contexts/AuthContext';
-
-=======
 import Cadastro from './pages/cadastro/Cadastro';
 import { AuthProvider } from './contexts/AuthContext';
 import ListaCategorias from './components/categorias/listaCategorias/ListaCategorias'
@@ -21,18 +17,13 @@ import Perfil from './pages/perfil/Perfil';
 import Carrinho from './pages/Cart/Carrinho';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
->>>>>>> 920cb4066d800a108c5b1a8256f998d3bb3e021f
 
 function App() {
   return (
     <>
-<<<<<<< HEAD
-    <AuthProvider>
-=======
 
       <AuthProvider>
         <ToastContainer />
->>>>>>> 920cb4066d800a108c5b1a8256f998d3bb3e021f
         <BrowserRouter>
           <Navbar />
           <div className='min-h-[80vh]'>
@@ -41,8 +32,6 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/cadastro" element={<Cadastro />} />
               <Route path="/home" element={<Home />} />
-<<<<<<< HEAD
-=======
               <Route path="/sobre" element={<Sobre />} />
               <Route path="/categorias" element={<ListaCategorias />} />
               <Route path="/cadastroCategoria" element={<FormularioCategoria />} />
@@ -54,18 +43,13 @@ function App() {
               <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
               <Route path="/perfil" element={<Perfil />} />
               <Route path="/carrinho" element={<Carrinho />} />
->>>>>>> 920cb4066d800a108c5b1a8256f998d3bb3e021f
             </Routes>
           </div>
           <Footer />
         </BrowserRouter>
-<<<<<<< HEAD
-        </AuthProvider>
-=======
       </AuthProvider>
 
->>>>>>> 920cb4066d800a108c5b1a8256f998d3bb3e021f
     </>
   );
 }
-export default App;
+export default App;
