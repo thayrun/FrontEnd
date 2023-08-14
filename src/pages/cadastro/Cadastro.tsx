@@ -126,7 +126,7 @@ function Cadastro() {
               <label htmlFor="cpf">CPF</label>
               <input
                 type="text"
-                id="cpf"
+                id="tipo"
                 name="tipo"
                 placeholder="CPF"
                 className="border-2 border-slate-700 rounded p-2"
@@ -141,7 +141,7 @@ function Cadastro() {
               <label htmlFor="cnpj">CNPJ</label>
               <input
                 type="text"
-                id="cnpj"
+                id="tipo"
                 name="tipo"
                 placeholder="CNPJ"
                 className="border-2 border-slate-700 rounded p-2"
