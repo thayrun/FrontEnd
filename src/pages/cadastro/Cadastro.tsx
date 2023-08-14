@@ -10,7 +10,6 @@ function Cadastro() {
   let navigate = useNavigate()
 
   const [confirmaSenha, setConfirmaSenha] = useState<string>("")
-  const [tipoSelecionado, setTipoSelecionado] = useState<string>("");
 
   const [usuario, setUsuario] = useState<Usuario>({
     id: 0,
