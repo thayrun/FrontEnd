@@ -1,0 +1,45 @@
+.nav-cont{
+    margin: 0 auto;
+    padding: 5px 2px 3px 4px;
+}
+
+.p-logo{
+    text-align: center;
+}
+
+.bg-geral {
+    background-image: url(./assets/images/bg-home.jpg);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+   }
+
+     /* Estilo para o container do ícone do carrinho ------NÃO ESTÁ SENDO USADO------*/
+  .cart-container {
+    width: 40px; /* Define a largura do container */
+    height: 40px; /* Define a altura do container */
+    background-color: #270606; /* Cor de fundo do container (opcional) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Transforma o container em um círculo */
+    position: absolute; 
+    transition: transform 0.3s ease-in-out;
+  }
+
+  
+  /* Estilo para o ícone do carrinho */
+  .cart-icon {
+    width: 70px;
+    height: auto;
+    margin: auto;
+    transition: transform 0.3s ease-in-out; 
+  }
+
+  .cart-icon:hover {
+    transform: scale(1.2); /* Aumenta o ícone em 20% no hover */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  }

@@ -1,4 +1,3 @@
-import React from 'react';
 import homeLogo from '../../assets/images/Sobre.jpg'
 
 
