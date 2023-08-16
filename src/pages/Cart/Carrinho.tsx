@@ -23,17 +23,24 @@ function Carrinho() {
     }, [token]);
 
     return (
-        <div className='mx-auto my-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
-            <div>
+    
+        <div className='border-4 rounded mx-auto py-6'>
+            <div className=''>
             {items.map((item) => (
-                <div>
-                    <h1>{item.nome}</h1>
-                    <h2>{item.descricao}</h2>
-                    <h2>R${item.preco}</h2>
+                <div className='container flex flex-col mx-auto cont-cart border-t-4 relative p-cart'>
+               <img src={item.foto} alt={item.nome} className='w-28 rounded pt-3 pl-2' />
+
+
+                <div className='absolute top-0 left-32 p-2'>
+                    <h4 className='font-inter font-bold py-4'>{item.nome}</h4>
+                    <h2 className=''>{item.descricao}</h2>
+                    <h2 className='text-green-700 font-bold pt-1'>R$ {item.preco}</h2>
+                </div>
 
                    
-                    <div>
-                        <button onClick={() => removerProduto(item.id)} className='text-white bg-red-500 hover:bg-red-400 items-center justify-center py-1 px-2'>Deletar do carrinho</button>
+                    <div className='py-4 px-1 ml-auto pr-5'>
+                        <button onClick={() => removerProduto(item.id)} className='text-red-500'>
+                            <span className='hover:bg-orange-100 rounded-full text-2xl absolute top-1/2 right-10 transform -translate-y-1/2 transition-transform duration-300 transform hover:scale-125'>&times;</span></button>
                     </div>
                 
             </div>
@@ -41,8 +48,8 @@ function Carrinho() {
         
        
         </div>
-        <div className='container text-white  py-1 px-2 align-self: center'>
-            <button onClick={limparCart} className='text-white bg-indigo-400 hover:bg-indigo-800  items-center py-2 px-2'>Finalizar Compra</button>
+        <div className='flex justify-center text-white py-5'>
+            <button onClick={limparCart} className='text-white font-semibold py-2 px-4 rounded f-button f-button:hover'>Finalizar Compra</button>
         </div>
         </div>
     )

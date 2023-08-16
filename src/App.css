@@ -43,3 +43,57 @@
     transform: scale(1.2); /* Aumenta o ícone em 20% no hover */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
   }
+
+
+
+
+  /*       Página de Carrinho         */
+  .cont-cart{
+    background-color:#4f8d684b;
+
+  }
+
+  .cart-img{
+    width: 70px;
+  }
+
+  .f-button{
+    background-color:#4F8D68;
+    transition: transform 0.3s ease-in-out; 
+   }
+
+  .f-button:hover{
+    background-color: #306245;
+    transform: scale(1.3)
+  }
+
+
+  .del-button{
+    background-color: #9d3103;
+  }
+  .del-button:hover{
+    background-color: #c03b07;
+  }
+
+.x-button{
+}
+
+ /* .bg-cart {
+  background-image: url(./assets/images/bg-cart.jpg);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  }
+  */
+
+  .p-cart{
+    padding-top: 3px;
+  
+  }
+
+
+
