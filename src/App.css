@@ -96,4 +96,20 @@
   }
 
 
+  .add-button{
+    background-color:#4F8D68;
+    transition: transform 0.2s ease-in-out; 
+   }
 
+  .add-button:hover{
+    background-color: #306245;
+    transform: scale(1.1)
+  }
+
+  .bg-green-organi{
+    background-color:#4F8D68;
+  }
+
+  .bg-green-organi:hover{
+    background-color: #306245;
+  }

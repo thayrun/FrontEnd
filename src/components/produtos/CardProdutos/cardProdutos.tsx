@@ -21,11 +21,10 @@ function CardProduto({ produto }: CardProdutoProps) {
     <>
       <div className="flex">
         <button
-          className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'
-          
-          onClick={() => adicionarProduto(produto)}
-        >
-          Adicionar ao carrinho
+    className='w-full text-white flex items-center justify-center py-2 relative add-button add-button:hover'
+    onClick={() => adicionarProduto(produto)}
+  >
+    Adicionar ao carrinho
         </button>
 
       </div>
@@ -35,10 +34,10 @@ function CardProduto({ produto }: CardProdutoProps) {
   let cardProdutosLoja = (
     <>
       <div className="flex">
-        <Link to={`/editarProduto/${produto.id}`} className='w-full text-white bg-indigo-400 hover:bg-indigo-800 flex items-center justify-center py-2'>
+        <Link to={`/editarProduto/${produto.id}`} className='w-full text-white bg-green-organi hover:bg-green-organi flex items-center justify-center py-2'>
           <button>Editar</button>
         </Link>
-        <Link to={`/deletarProduto/${produto.id}`} className='text-white bg-red-400 hover:bg-red-700 w-full flex items-center justify-center'>
+        <Link to={`/deletarProduto/${produto.id}`} className='text-white bg-orange-400 hover:bg-orange-700 w-full flex items-center justify-center'>
           <button>Deletar</button>
         </Link>
 
@@ -47,27 +46,29 @@ function CardProduto({ produto }: CardProdutoProps) {
   )
 
   return (
-    <div className='border-slate-900 border flex flex-col rounded overflow-hidden justify-between'>
+      <div className='container pl-6 pr-2'>
+    <div className='flex flex-col border border-orange-200 rounded overflow-hidden justify-between'>
       <div>
-        <div className="flex w-full bg-indigo-400 py-2 px-4 items-center gap-4">
-          <img src={produto.usuario?.foto} className='h-12 rounded-full' alt="" />
-          <h3 className='text-lg font-bold text-center uppercase'>{produto.usuario?.nome}</h3>
-        </div>
-        <div className='p-4'>
-          <h4 className='text-lg font-semibold uppercase'>{produto.nome}</h4>
-          <p>Descrição: {produto.descricao}</p>
-          <p>Preço: {produto.preco}</p>
-          <p>Quantidade: {produto.quantidade}</p>
-          <p>Foto: <img src={produto.foto} className='h-12 rounded-full' alt="Foto do Produto" /></p>
+
+        <div className='bg-white font-inter'>
+          <img src={produto.foto} className='h-full w-full object-cover object-center lg:h-80 lg:w-full bg-gray-200 hover:opacity-75 cursor-pointer' alt="Foto do Produto" onClick={() => adicionarProduto(produto)} />
+          <h4 className='text-lg font-semibold uppercase pl-2 pt-4'>{produto.nome}</h4>
+          <p className='pl-2 '>Descrição: {produto.descricao}</p>
           {/* Lógica pra Exibir a Categoria no Card*/}
-          {produto.categoria && <p>Categoria: {produto.categoria.nome}</p>}
+          {produto.categoria && <p className='pl-2'>Categoria: {produto.categoria.nome}</p>}
+          <p className='pl-2 text-gray-900'>Preço: {produto.preco}</p>
+          <p className='pl-2'>Quantidade: {produto.quantidade}</p>
+          <div className="flex py-2 px-4 items-center gap-4">
+          <img src={produto.usuario?.foto} className='h-12 rounded-full' alt="" />
+          <h4 className='text-lg font-bold text-center uppercase'>{produto.usuario?.nome}</h4>
+        </div>
 
           {usuario.tipo == "CNPJ" ? cardProdutosLoja : <></>}
 
           {usuario.tipo == "CPF" ? cardProdutosCliente : <></>}
         </div>
       </div>
-
+      </div>
     </div>
   );
 }
