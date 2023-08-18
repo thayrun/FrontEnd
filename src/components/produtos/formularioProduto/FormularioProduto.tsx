@@ -139,10 +139,10 @@ function FormularioProduto() {
   const carregandoCategoria = categoria.descricao === '';
 
   return (
-    <div className="container flex flex-col mx-auto items-center">
+    <div className="container flex flex-col mx-auto items-center border-4">
       <h1 className="text-2xl text-center my-4">{id !== undefined ? 'Editar Produto' : 'Cadastrar Produto'}</h1>
 
-      <form onSubmit={gerarNovoProduto} className="flex flex-wrap items-center justify-center md:w-full gap-4 ">
+      <form onSubmit={gerarNovoProduto} className="flex flex-wrap items-center justify-center md:w-full gap-4">
 
         <div className="flex flex-col gap-2 lg:w-2/5">
           <label htmlFor="nome">Nome do produto</label>
