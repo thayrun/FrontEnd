@@ -42,19 +42,6 @@ function login(e: ChangeEvent<HTMLFormElement>) {
         <form onSubmit={login} className="flex justify-center items-center flex-col w-2/3 gap-6" >
           <h2 className="text-slate-900 text-4xl sm:text-5xl">Entrar</h2>
 
-<<<<<<< HEAD
-        <hr className="border-slate-800 w-full" />
-        
-        <p> 
-          Ainda não tem uma conta?{' '}
-        </p>
-
-      </form>
-
-      <div className="fundoLogin hidden lg:block"></div>
-
-    </div>
-=======
           <div className="flex flex-col w-full">
             <label htmlFor="usuario"></label>
             <input
@@ -102,7 +89,6 @@ function login(e: ChangeEvent<HTMLFormElement>) {
         <div className="fundoLogin hidden lg:block"></div>
       </div>
     </>
->>>>>>> 920cb4066d800a108c5b1a8256f998d3bb3e021f
   );
 }
 
