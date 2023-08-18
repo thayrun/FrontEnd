@@ -24,7 +24,7 @@ function Perfil() {
     <div className='container mx-auto mt-4 rounded-2xl overflow-hidden w-96'>
       <img className='w-full h-48 object-cover border-b-8 border-white' src={loginLogo} alt="Capa do Perfil" />
       <img src={usuario.foto} alt={`Foto de perfil de ${usuario.nome}`} className='rounded-full w-40 mx-auto mt-[-4rem] border-4 border-white relative z-10' />
-      <div className="relative mt-[-2rem] h-40 flex flex-col bg-lime-900 text-white text-2xl items-center justify-center">
+      <div className="relative mt-[-2rem] h-40 flex flex-col bg-lime-900 text-white text-1xl items-center justify-center">
         <p>Nome: {usuario.nome} </p>
         <p>Email: {usuario.usuario}</p>
         <p>Tipo: {usuario.tipo}</p>
