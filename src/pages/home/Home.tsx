@@ -26,7 +26,7 @@ function Home() {
             
 
                 <Link to='/produtos'>
-                  <button className='border rounded text-white hover:text-black py-2 px-4 hover:bg-white border-t-[6px]'>Ver Loja</button>
+                  <button className='rounded bg-white text-lime-950 py-2 px-4'>Ver Loja</button>
                 </Link>
                 
               </div>
