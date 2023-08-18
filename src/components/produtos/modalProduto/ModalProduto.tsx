@@ -19,7 +19,7 @@ function ModalProduto() {
   let modalLoja = (
     <>
       <Popup
-        trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Novo Produto</button>} modal>
+        trigger={<button className='rounded bg-white text-lime-950 py-2 px-4'>Novo Produto</button>} modal>
         <div>
           <FormularioProduto />
         </div>
@@ -31,7 +31,9 @@ function ModalProduto() {
   return (
     <>
       <Popup
-        trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Ver Carrinho</button>} modal>
+
+        trigger={<button className='rounded bg-white text-lime-950 py-2 px-4'>Ver Carrinho</button>} modal>
+
         <div>
           <Carrinho />
         </div>
