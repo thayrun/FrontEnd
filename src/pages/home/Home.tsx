@@ -15,7 +15,9 @@ function Home() {
         <div className='container grid text-lime-950'>
           <div className="flex flex-col gap-4 items-center justify-center py-4">
             <h2 className='text-5xl font-bold text-orange-500 pt-20'>Seja bem vinde!</h2>
-            <p className='text-xl'>Encontre seus produtos orgânicos</p>
+
+            <p className='text-xl text-lime-100'>Encontre seus produtos orgânicos</p>
+
   
               <div className="flex justify-around gap-4">
 
@@ -24,7 +26,7 @@ function Home() {
             
 
                 <Link to='/produtos'>
-                  <button className='rounded bg-white text-lime-950 py-2 px-4'>Ver Loja</button>
+                  <button className='border rounded text-white hover:text-black py-2 px-4 hover:bg-white border-t-[6px]'>Ver Loja</button>
                 </Link>
                 
               </div>
