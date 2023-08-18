@@ -8,6 +8,9 @@ module.exports = {
     fontFamily: {
       roboto: ['Roboto Slab', 'serif']
     },
+    fontFamily: {
+      inter: ['Inter', 'sans-serif']
+    }
   },
   plugins: [],
 }
