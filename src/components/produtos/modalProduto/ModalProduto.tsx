@@ -31,7 +31,9 @@ function ModalProduto() {
   return (
     <>
       <Popup
+
         trigger={<button className='rounded bg-white text-lime-950 py-2 px-4'>Ver Carrinho</button>} modal>
+
         <div>
           <Carrinho />
         </div>
