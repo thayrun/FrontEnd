@@ -31,7 +31,7 @@ function ModalProduto() {
   return (
     <>
       <Popup
-        trigger={<button className='border rounded px-4 hover:bg-white hover:text-indigo-800'>Ver Carrinho</button>} modal>
+        trigger={<button className='border rounded px-4 hover:bg-white hover:text-black text-white border-t-[6px]'>Ver Carrinho</button>} modal>
         <div>
           <Carrinho />
         </div>
