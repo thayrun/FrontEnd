@@ -52,7 +52,7 @@ function ListaProdutos() {
           wrapperClass="dna-wrapper mx-auto"
         />
       )}
-      <div className='container mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
+      <div className='container mt-6 mx-auto flex justify-center items-center grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
         {produtos.map((produto) => (
           <CardProduto key={produto.id} produto={produto} />
         ))}

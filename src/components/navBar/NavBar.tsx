@@ -63,10 +63,12 @@ function Navbar() {
         </div>
 
         <div className='w-screen bg-green-900 flex justify-center text-md'>
-          <div className='flex gap-7 py-3 text-white font-roboto'>
-            <Link to='/sobre' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Sobre</Link>
-            <Link to='/produtos' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Produtos</Link>
-            <Link to='/login' className='hover:text-orange-950 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600'>Login</Link>
+          <div className='flex gap-7 py-3 text-white font-roboto mr-16'>
+          <Link to='/cadastro' className='rounded link-animated border-animate hover:text-orange-400 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600 mr-16'>
+        CADASTRE-SE JÁ !
+          </Link>
+            <Link to='/login' className='hover:text-orange-400 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600 pt-1 mr-6'>Faça seu Login</Link>
+            <Link to='/sobre' className='hover:text-orange-400 hover:rounded transition duration-300 transition-transform transform hover:scale-105 focus:outline-none focus:text-orange-600 pt-1 mr-20'>Sobre Nós</Link>
           </div>
           </div>
 

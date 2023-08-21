@@ -17,21 +17,30 @@
     z-index: -1;
    }
 
-     /* Estilo para o container do ícone do carrinho ------NÃO ESTÁ SENDO USADO------*/
-  .cart-container {
-    width: 40px; /* Define a largura do container */
-    height: 40px; /* Define a altura do container */
-    background-color: #270606; /* Cor de fundo do container (opcional) */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%; /* Transforma o container em um círculo */
-    position: absolute; 
-    transition: transform 0.3s ease-in-out;
+  .bg-nav{
+    background-image: url(./assets/images/bg-nav.jpg);
+    background-repeat: repeat;
+    min-height: 100%;
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    z-index: -1;
   }
-
   
   /* Estilo para o ícone do carrinho */
+  
+  @keyframes balancar {
+    0% {
+      transform: scale(1.2) rotate(-10deg);         /* Aumenta o ícone em 10% no hover */
+    }
+    50% {
+      transform: scale(1.2) rotate(10deg);
+    }
+    100% {
+      transform: scale(1.2) rotate(-10deg);
+    }
+  }
+
   .cart-icon {
     width: 70px;
     height: auto;
@@ -40,17 +49,17 @@
   }
 
   .cart-icon:hover {
-    transform: scale(1.2); /* Aumenta o ícone em 20% no hover */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    animation: balancar 2s ease-in-out infinite; 
   }
-
-
 
 
   /*       Página de Carrinho         */
   .cont-cart{
     background-color:#4f8d684b;
-
+  }
+  .cont-cart-main{
+    background-color:#12522b5d;
   }
 
   .cart-img{
@@ -64,7 +73,7 @@
 
   .f-button:hover{
     background-color: #306245;
-    transform: scale(1.3)
+    transform: scale(1.1)
   }
 
 
@@ -75,23 +84,49 @@
     background-color: #c03b07;
   }
 
-.x-button{
+.finalizar-button{
+  padding-left: 88%;
 }
 
- /* .bg-cart {
-  background-image: url(./assets/images/bg-cart.jpg);
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
+.cont-cupom{
+  padding-right: 60%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
 
+.cont-cep{
+  padding-left: 65%;
+  margin-top: -110px;
+  padding-bottom: 60px;
+}
+
+/* Estilo padrão para o link */
+.link-animated {
+  display: inline-block;
+  padding: 0.1rem 1rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
+  transition: border-color 0.1s ease; /* Adiciona uma transição suave na mudança da cor da borda */
+}
+
+/* Estilo para a borda animada */
+.border-animate {
+  animation: borderPulse 0.8s infinite alternate;
+}
+
+/* Animação da cor da borda */
+@keyframes borderPulse {
+  0% {
+    border-color: transparent;
   }
-  */
+  100% {
+    border-color: #dc7734; /* Cor da borda */
+  }
+}
 
   .p-cart{
-    padding-top: 3px;
+    padding-top: 2px;
   
   }
 
@@ -106,12 +141,25 @@
     transform: scale(1.1)
   }
 
+
+
+     /* Cores Oficias da Paleta da Organi */
   .bg-green-organi{
     background-color:#4F8D68;
   }
-
+                                                  /* Com Hover*/
   .bg-green-organi:hover{
     background-color: #306245;
   }
 
-  
+
+
+  .green-bg-organi{                                     /* Sem Hover */
+    background-color:#4F8D68;
+  }
+
+
+
+  .cart-brown-organi{
+    background-color: #9d310388;
+  }
