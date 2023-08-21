@@ -21,7 +21,7 @@ function CardProduto({ produto }: CardProdutoProps) {
     <>
       <div className="flex">
         <button
-    className='w-full text-white flex items-center justify-center py-2 relative add-button add-button:hover'
+    className='w-full border rounded text-white flex items-center justify-center py-2 relative add-button add-button:hover'
     onClick={() => adicionarProduto(produto)}
   >
     Adicionar ao carrinho
@@ -43,15 +43,15 @@ function CardProduto({ produto }: CardProdutoProps) {
 
       </div>
     </>
+
   )
 
   return (
       <div className='container pl-6 pr-2'>
     <div className='flex flex-col border border-orange-200 rounded overflow-hidden justify-between'>
       <div>
-
         <div className='bg-white font-inter'>
-          <img src={produto.foto} className='h-full w-full object-cover object-center lg:h-80 lg:w-full bg-gray-200 hover:opacity-75 cursor-pointer' alt="Foto do Produto" onClick={() => adicionarProduto(produto)} />
+          <img src={produto.foto} className='h-full w-full border rounded object-cover object-center lg:h-80 lg:w-full hover:opacity-75 cursor-pointer add-button' alt="Foto do Produto" />
           <h4 className='text-lg font-semibold uppercase pl-2 pt-4'>{produto.nome}</h4>
           <p className='pl-2 '>Descrição: {produto.descricao}</p>
           {/* Lógica pra Exibir a Categoria no Card*/}

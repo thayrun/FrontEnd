@@ -12,8 +12,12 @@
 
 /* .swiper envolve todo o componente Swiper */
 .swiper {
-    width: 100%;
-    height: 360px; /* Altura fixa para o contêiner do Swiper */
+    width: 95%; /* Tamanho do Slide/Swiper */
+    max-height: 600px; /* Altura fixa para o contêiner do Slide/Swiper */
+    margin: 0 auto;
+      border-style: ridge;
+      border-color: #9D3103;
+      border-radius: 5px;
   }
   
   .swiper-slide {
@@ -22,7 +26,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 0px;      /* Espaçamento do SLIDE pro FOOTER*/
   }
   
 /* Ajuste o tamanho das imagens */
@@ -30,4 +33,39 @@
     width: 100%; /* Largura do slide */
     height: 100%; /* Altura do slide */
     object-fit: cover;
+  }
+
+
+
+  /* Lista de Produtos da HOME*/
+  .contain-produtos{
+    background-color: #d1d1d196;
+    border-radius: 0.375rem;
+    border-color: #9d310309;
+    border-width: 1px;
+  }
+
+
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 26px;
+    margin: 0 auto;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #666;
   }
