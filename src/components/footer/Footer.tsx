@@ -18,7 +18,6 @@ function Footer() {
             <span className='font-bold text-blue-500'>i</span>
             <span className='font-bold text-indigo-500'>x</span>.
           </p>
-
         </div>
       </div>
     </>
