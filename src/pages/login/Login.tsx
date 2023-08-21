@@ -39,17 +39,17 @@ function login(e: ChangeEvent<HTMLFormElement>) {
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
-        <form onSubmit={login} className="flex justify-center items-center flex-col w-1/2 gap-4" >
-          <h2 className="text-slate-900 text-5xl ">Entrar</h2>
+        <form onSubmit={login} className="flex justify-center items-center flex-col w-2/3 gap-6" >
+          <h2 className="text-slate-900 text-4xl sm:text-5xl">Entrar</h2>
 
           <div className="flex flex-col w-full">
-            <label htmlFor="usuario">Usuário</label>
+            <label htmlFor="usuario"></label>
             <input
               type="text"
               id="usuario"
               name="usuario"
-              placeholder="Usuario"
-              className="border-2 border-lime-900 rounded p-2"
+              placeholder="E-mail"
+              className="border-b border-black p-1"
               value={usuarioLogin.usuario}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             
@@ -57,19 +57,19 @@ function login(e: ChangeEvent<HTMLFormElement>) {
           </div>
           
           <div className="flex flex-col w-full">
-            <label htmlFor="senha">Senha</label>
+            <label htmlFor="senha"></label>
             <input
               type="password"
               id="senha"
               name="senha"
               placeholder="Senha"
-              className="border-2 border-lime-900 rounded p-2"
+              className="border-b border-black p-1"
               value={usuarioLogin.senha} 
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
              
             />
           </div>
-          <button  type='submit' className="rounded bg-green-900 hover:bg-green-700 text-white w-1/2 py-2 flex justify-center">
+          <button  type='submit' className="rounded-xl bg-[#14532d] hover:bg-[#4f8d68] text-white sm:w-1/2 py-2 flex justify-center text-lg tracking-wide ease-in-out duration-1000 hover:underline w-full">
           {isLoading ? <RotatingLines
             strokeColor="white"
             strokeWidth="5"
@@ -79,12 +79,9 @@ function login(e: ChangeEvent<HTMLFormElement>) {
           /> :
             <span>Entrar</span>}
           </button>
-
-          <hr className="border-slate-800 w-full" />
-
           <p>
             Ainda não tem uma conta?{' '}
-            <Link to = "/cadastro" className= "text-orange-600 hover:underline">
+            <Link to = "/cadastro" className= "text-[#EF7D0C] hover:underline">
             Cadastre-se
             </Link>
           </p>
