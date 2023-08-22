@@ -4,6 +4,7 @@ import './Home.css';
 import { Link} from 'react-router-dom'
 import ImgSlide from '../home/SwiperHome'
 import ListaProdutos from '../../components/produtos/ListaProdutos/listaProdutos';
+import ModalProduto from '../../components/produtos/modalProduto/ModalProduto';
 
 
 function Home() {
@@ -24,8 +25,8 @@ function Home() {
             </div>
     */}
 
-
              <div className='container mt-7 mx-auto pt-16'>
+             <ModalProduto/>
              <h1 className='font-roboto font-bold text-3xl pb-1'>Encontre seu Produto: </h1>
               <div className='contain-produtos flex justify-center items-center pr-6'>
              <ListaProdutos />

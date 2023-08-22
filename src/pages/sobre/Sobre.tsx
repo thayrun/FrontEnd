@@ -24,20 +24,17 @@ function Sobre() {
               <h3 className="mt-6 text-xl dark:text-white text-black text-justify">
                 Somos a equipe da Gensix, um grupo de alunos com paixão pelo desenvolvimento de software.
                 Iniciamos nossa jornada em meados de 2023, participando do bootcamp de Desenvolvimento FullStack Java pela Generation Brasil.
-                Ao longo desse período, mergulhamos de cabeça nos desafios e oportunidades para aprender e aprimorar ainda maias nossas habilidades técnicas e soft skills.
+                Ao longo desse período, mergulhamos de cabeça nos desafios e oportunidades para aprender e aprimorar ainda mais nossas habilidades técnicas e soft skills.
               </h3>
             </div>
-
-            <div>
-              <div>
-                <img
-                  className=" flex-justify-end mt-4 rounded-2xl overflow-hidden"
-                  src={genSix} alt={`Foto dos integrantes da Gensix`}
-                />
-              </div>
-
-            </div>
           </div>
+        </div>
+
+        <div>
+          <img
+            className="flex-justify-end mt-4 rounded-2xl overflow-hidden"
+            src={genSix} alt={`Foto dos integrantes da Gensix`}
+          />
         </div>
       </section>
 
@@ -51,25 +48,22 @@ function Sobre() {
               <h3 className="mt-6 text-xl dark:text-white text-black text-justify">
                 Em nossa trajetória no bootcamp, fomos desafiados a criar uma aplicação que tenha impacto
                 em algum dos Objetivos De Sustentabilidade da ONU. E nós escolhemos a ODS 2: Fome zero e agricultura sustentável.
-                De acordo com o estudo produzido por diversas agências governamentais e não governamentais, 
+                De acordo com o estudo produzido por diversas agências governamentais e não governamentais,
                 cerca de 258 milhões de pessoas em 58 países sofreram insegurança alimentar.
                 Isso se considerarmos apenas o ano de 2022.
-                Então queríamos desenvolver algo que pudesse de fato viabilizar a conexão de pequenos produtores, donatários, 
+                Então queríamos desenvolver algo que pudesse de fato viabilizar a conexão de pequenos produtores, donatários,
                 consumidores em vulnerabilidade social e afins.
-
               </h3>
             </div>
-
-            <div>
-              <img
-                className=" flex-justify-center rounded-full border-4 border-[#f3f4f6]"
-                src={logoOds} alt={`Foto das ODS da ONU`}
-              />
-            </div>
-          
           </div>
         </div>
-        
+
+        <div>
+          <img
+            className="flex-justify-center rounded-full border-4 border-[#f3f4f6]"
+            src={logoOds} alt={`Foto das ODS da ONU`}
+          />
+        </div>
       </section>
 
       <section className="h-min bg-gradient-to-r from-[#EF7D0C] to-[#9D3103] grid sm:grid-cols-2 sm:place-items-center px-4 py-16 relative overflow-hidden">
@@ -82,78 +76,74 @@ function Sobre() {
               <h3 className="mt-6 text-xl dark:text-white text-black text-justify">
                 E assim nasce a Organi. Uma aplicação E-Commerce focada em facilitar a compra e venda de produtos orgânicos de produtores independentes.
                 Para que a agricultura familiar possa ter um novo caminho de renda e que consumidores finais possam ter acesso à produtos orgânicos e de qualidade.
-                Futuramente pretendemos  implementar sessões de informação gratuita sobre alimentação adequada e acesso à programas de incentivo para produção agrícola. 
+                Futuramente pretendemos implementar sessões de informação gratuita sobre alimentação adequada e acesso à programas de incentivo para produção agrícola.
               </h3>
             </div>
-            <div>
-              <div className="mt-10">
-                {/* Decorative image grid */}
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl "
-                >
-                  <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
-                    <div className="py-16 flex sm:items-center space-x-6 lg:space-x-8">
-                      <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img
-                            src="https://www.unimed.coop.br/documents/20182/16124848/frutas-vermelhas.jpg/4fbc9d33-b3c1-48ac-97d3-445136978a7c?t=1641933504506"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div className="h-64 w-44  overflow-hidden rounded-lg">
-                          <img
-                            src="https://rotasdeviagem.com.br/wp-content/uploads/2022/04/frutas-mais-consumidas-no-brasil.webp"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                      </div>
-                      <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-64 w-44  overflow-hidden rounded-lg">
-                          <img
-                            src="https://capitalist.com.br/wp-content/uploads/2023/01/frutas-scaled.jpg"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div className="h-64 w-44  overflow-hidden rounded-lg">
-                          <img
-                            src="https://media.gazetadopovo.com.br/2023/03/30141325/bigstock-Watermelon-Slice-On-Background-460538017-960x540.jpg"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div className="h-64 w-44  overflow-hidden rounded-lg">
-                          <img
-                            src="https://www.avivaescolainfantil.com.br/wp-content/uploads/2022/06/kiwi-29062022.jpg"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                      </div>
-                      <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
-                        <div className="h-64 w-44 overflow-hidden rounded-lg">
-                          <img
-                            src="https://p2.trrsf.com/image/fget/cf/1200/1200/middle/images.terra.com/2022/09/30/1413682278-frutas-baratas-de-outubro.jpg"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                        <div className="h-64 w-44  overflow-hidden rounded-lg">
-                          <img
-                            src="https://cdn.wizard.com.br/wp-content/uploads/2017/01/05115936/aprenda-os-nomes-das-frutas-em-ingles.jpg"
-                            alt=""
-                            className="h-full w-full object-cover object-center"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+          </div>
+        </div>
+
+        
+        {/* Decorative image grid */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl "
+        >
+          <div className="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+            <div className="py-16 flex sm:items-center space-x-6 lg:space-x-8">
+              <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                <div className="h-64 w-44 overflow-hidden rounded-lg">
+                  <img
+                    src="https://www.unimed.coop.br/documents/20182/16124848/frutas-vermelhas.jpg/4fbc9d33-b3c1-48ac-97d3-445136978a7c?t=1641933504506"
+                    alt=""
+                    className="h-full w-full object-cover object-center"
+                  />
                 </div>
-
-
+                <div className="h-64 w-44  overflow-hidden rounded-lg">
+                  <img
+                    src="https://rotasdeviagem.com.br/wp-content/uploads/2022/04/frutas-mais-consumidas-no-brasil.webp"
+                    alt=""
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+              </div>
+              <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                <div className="h-64 w-44  overflow-hidden rounded-lg">
+                  <img
+                    src="https://capitalist.com.br/wp-content/uploads/2023/01/frutas-scaled.jpg"
+                    alt=""
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+                <div className="h-64 w-44  overflow-hidden rounded-lg">
+                  <img
+                    src="https://media.gazetadopovo.com.br/2023/03/30141325/bigstock-Watermelon-Slice-On-Background-460538017-960x540.jpg"
+                    alt=""
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+                <div className="h-64 w-44  overflow-hidden rounded-lg">
+                  <img
+                    src="https://www.avivaescolainfantil.com.br/wp-content/uploads/2022/06/kiwi-29062022.jpg"
+                    alt=""
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+              </div>
+              <div className="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                <div className="h-64 w-44 overflow-hidden rounded-lg">
+                  <img
+                    src="https://p2.trrsf.com/image/fget/cf/1200/1200/middle/images.terra.com/2022/09/30/1413682278-frutas-baratas-de-outubro.jpg"
+                    alt=""
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
+                <div className="h-64 w-44  overflow-hidden rounded-lg">
+                  <img
+                    src="https://cdn.wizard.com.br/wp-content/uploads/2017/01/05115936/aprenda-os-nomes-das-frutas-em-ingles.jpg"
+                    alt=""
+                    className="h-full w-full object-cover object-center"
+                  />
+                </div>
               </div>
             </div>
           </div>
