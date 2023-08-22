@@ -6,7 +6,7 @@ function Footer() {
 
   return (
     <>
-      <div className="bg-footer flex justify-center bg-lime-950 text-white">
+      <div className="bg-footer flex justify-center bg-gradient-to-r from-green-500 via-green-950 to-green-900 text-white">
         <div className="container flex flex-col items-center py-4">
           <p className='text-xl font-bold'>Organi &copy; | 2023 </p>
 

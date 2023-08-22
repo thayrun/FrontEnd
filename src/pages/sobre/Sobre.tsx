@@ -1,60 +1,89 @@
-import homeLogo from '../../assets/images/Sobre.jpg'
 
-const people = [
-    {
-      name: "Camila C.",
-      role: "Dev Full Stack",
-      imageUrl:
-        "https://avatars.githubusercontent.com/u/133771938?v=4",
-    },
-    {
-      name: "Marcelo A.",
-      role: "Dev Full Stack",
-      imageUrl: "https://avatars.githubusercontent.com/u/88298359?s=96&v=4",
-    },
-  
-    {
-      name: "Tainara M.",
-      role: "Dev Full Stack",
-      imageUrl:
-        "https://avatars.githubusercontent.com/u/132948293?v=4",
-    },
-    {
-      name: "Tais S.",
-      role: "Dev Full Stack",
-      imageUrl:
-        "https://avatars.githubusercontent.com/u/133772693?v=4",
-    },
-  
-    {
-      name: "Thayron N.",
-      role: "Dev Full Stack",
-      imageUrl:
-        "https://avatars.githubusercontent.com/u/132508300?v=4",
-    },
-    {
-      name: "Sabrina P.",
-      role: "Dev Full Stack",
-      imageUrl:
-        "https://avatars.githubusercontent.com/u/101189470?v=4",
-    },
-  ];
+import { LinkedinLogo, GithubLogo } from '@phosphor-icons/react'
+import logoOds from '../../assets/images/ods logo.jpg'
+import genSix from '../../assets/images/gensix2.jpg'
+import camihPerfil from '../../assets/images/camila.jpg'
+import maPerfil from '../../assets/images/marcelo.jpg'
+import saPerfil from '../../assets/images/sabrina.jpeg'
+import tainaraPerfil from '../../assets/images/tainara.jpg'
+import taisPerfil from '../../assets/images/tais.jpg'
+import thayPerfil from '../../assets/images/thayron.jpg'
+
+
 
 function Sobre() {
-    return (
-        <>
-        <section className="h-min dark:from-[black] dark:to-[black] bg-gradient-to-r from-[#e5804d] to-[#F25258] grid sm:grid-cols-2 sm:place-items-center px-4 py-16 relative overflow-hidden">
+  return (
+    <>
+      <section className="h-min bg-gradient-to-r from-[#9D3103] to-[#FFDF93] grid sm:grid-cols-2 sm:place-items-center px-4 py-16 relative overflow-hidden">
         <div className="pb-80 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
           <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8 ">
             <div className="sm:max-w-lg">
               <h1 className="text-4xl py-16 tracking-tight text-center font-bold dark:text-white text-black sm:text-6xl">
-                Nossos produtos
+                Gensix
               </h1>
-              <p className="mt-6 text-xl dark:text-white text-black text-justify">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
-                nulla assumenda exercitationem corporis eligendi nemo. Cum
-                cumque deserunt quis quia.
-              </p>
+              <h3 className="mt-6 text-xl dark:text-white text-black text-justify">
+                Somos a equipe da Gensix, um grupo de alunos com paixão pelo desenvolvimento de software.
+                Iniciamos nossa jornada em meados de 2023, participando do bootcamp de Desenvolvimento FullStack Java pela Generation Brasil.
+                Ao longo desse período, mergulhamos de cabeça nos desafios e oportunidades para aprender e aprimorar ainda maias nossas habilidades técnicas e soft skills.
+              </h3>
+            </div>
+
+            <div>
+              <div>
+                <img
+                  className=" flex-justify-end mt-4 rounded-2xl overflow-hidden"
+                  src={genSix} alt={`Foto dos integrantes da Gensix`}
+                />
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="h-min bg-gradient-to-r from-[#14532D] to-[#4F8D68] grid sm:grid-cols-2 sm:place-items-center px-4 py-16 relative overflow-hidden">
+        <div className="pb-80 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+          <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8 ">
+            <div className="sm:max-w-lg">
+              <h1 className="text-4xl py-16 tracking-tight text-center font-bold dark:text-white text-black sm:text-6xl">
+                Propósito
+              </h1>
+              <h3 className="mt-6 text-xl dark:text-white text-black text-justify">
+                Em nossa trajetória no bootcamp, fomos desafiados a criar uma aplicação que tenha impacto
+                em algum dos Objetivos De Sustentabilidade da ONU. E nós escolhemos a ODS 2: Fome zero e agricultura sustentável.
+                De acordo com o estudo produzido por diversas agências governamentais e não governamentais, 
+                cerca de 258 milhões de pessoas em 58 países sofreram insegurança alimentar.
+                Isso se considerarmos apenas o ano de 2022.
+                Então queríamos desenvolver algo que pudesse de fato viabilizar a conexão de pequenos produtores, donatários, 
+                consumidores em vulnerabilidade social e afins.
+
+              </h3>
+            </div>
+
+            <div>
+              <img
+                className=" flex-justify-center rounded-full border-4 border-[#f3f4f6]"
+                src={logoOds} alt={`Foto das ODS da ONU`}
+              />
+            </div>
+          
+          </div>
+        </div>
+        
+      </section>
+
+      <section className="h-min bg-gradient-to-r from-[#EF7D0C] to-[#9D3103] grid sm:grid-cols-2 sm:place-items-center px-4 py-16 relative overflow-hidden">
+        <div className="pb-80 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40">
+          <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8 ">
+            <div className="sm:max-w-lg">
+              <h1 className="text-4xl py-16 tracking-tight text-center font-bold dark:text-white text-black sm:text-6xl">
+                Organi
+              </h1>
+              <h3 className="mt-6 text-xl dark:text-white text-black text-justify">
+                E assim nasce a Organi. Uma aplicação E-Commerce focada em facilitar a compra e venda de produtos orgânicos de produtores independentes.
+                Para que a agricultura familiar possa ter um novo caminho de renda e que consumidores finais possam ter acesso à produtos orgânicos e de qualidade.
+                Futuramente pretendemos  implementar sessões de informação gratuita sobre alimentação adequada e acesso à programas de incentivo para produção agrícola. 
+              </h3>
             </div>
             <div>
               <div className="mt-10">
@@ -124,53 +153,189 @@ function Sobre() {
                   </div>
                 </div>
 
-                
+
               </div>
             </div>
           </div>
         </div>
       </section>
-      
-      <section className="h-min dark:bg-black bg-[#FAFAFA] py-16 rounded-2xl sm:h-screen grid place-items-center my-16 mx-4 sm:py-12">
+
+      <section className="h-min bg-white py-16 rounded-2xl sm:h-screen grid place-items-center my-16 mx-4 sm:py-12">
         <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 lg:px-8 xl:grid-cols-3">
           <div className="text-justify">
-            <h2 className="dark:text-white text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Organi
+            <h2 className="text-center text-3xl font-bold tracking-tight text-green-600 sm:text-4xl">
+              Conheça nosso time de desenvolvimento:
             </h2>
-            <p className="dark:text-white m-6 text-lg leading-8 ">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum
-              odio voluptatibus natus consectetur quaerat, dolor illo officia
-              nobis? Quidem, quibusdam?
-            </p>
+            <h3 className="mt-6 text-xl text-black text-center">
+              Entre em contato conosco pelo Linkedin e conheça outros projetos dos integrantes em nossos repositórios no Github!
+            </h3>
           </div>
           <ul
             role="list"
-            className="grid-cols-1 grid gap-y-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-y-16 xl:col-span-2"
-          >
-            {people.map((person) => (
-              <li key={person.name} className="">
-                <div className="grid grid-cols-3 items-center px-4 py-2">
-                  <img
-                    className="h-16 w-16 rounded-full"
-                    src={person.imageUrl}
-                    alt=""
-                  />
-                  <div className="col-span-2">
-                    <h3 className="dark:text-white text-base font-semibold leading-7 tracking-tight text-gray-900">
-                      {person.name}
-                    </h3>
-                    <p className="dark:text-white text-sm font-semibold leading-6">
-                      {person.role}
-                    </p>
-                  </div>
+            className="grid-cols-1 grid gap-y-2 sm:grid-cols-2 lg:grid-cols-3 sm:gap-y-16 xl:col-span-2">
+
+
+
+            <div className="grid grid-cols-3 items-justify px-3 py-2">
+              <img
+                className="h-22 w-24 rounded-full border-2 border-[#f3f4f6]"
+                src={camihPerfil} alt={`Foto de perfil de Camila Nascimento`}
+              />
+
+              <div className="col-span-2">
+                <h2 className="text-base font-bold leading-6 tracking-tight text-gray-950">
+                  Camila Nascimento
+                </h2>
+                <p className="text-sm font-semibold leading-10">
+                  FullStack Developer
+                </p>
+                <div className="flex justify-start">
+                  <a href="https://www.linkedin.com/in/camilanascimento23/" target="_blank">
+                    <LinkedinLogo size={33} weight='bold' color='#0369a1' />
+                  </a>
+                  <a href="https:/github.com/milabizzle" target="_blank">
+                    <GithubLogo size={33} weight='bold' color='#4b5563' />
+                  </a>
                 </div>
-              </li>
-            ))}
+
+              </div>
+            </div>
+
+
+
+            <div className="grid grid-cols-3 items-justify px-3 py-2">
+              <img
+                className="h-22 w-24 rounded-full border-[#9ca3af]"
+                src={maPerfil} alt={`Foto de perfil de Marcelo Apolinario`}
+              />
+
+              <div className="col-span-2">
+                <h2 className="text-base font-bold leading-6 tracking-tight text-gray-950">
+                  Marcelo Apolinário
+                </h2>
+                <p className="text-sm font-semibold leading-10">
+                  FullStack Developer
+                </p>
+                <div className="flex justify-start">
+                  <a href="https://www.linkedin.com/in/imapolinario/" target="_blank">
+                    <LinkedinLogo size={33} weight='bold' color='#0369a1' />
+                  </a>
+                  <a href="https://github.com/whoamiApolo" target="_blank">
+                    <GithubLogo size={33} weight='bold' color='#4b5563' />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className="grid grid-cols-3 items-center px-3 py-2">
+              <img
+                className="h-22 w-24 rounded-full border-2 border-[#f3f4f6]"
+                src={saPerfil} alt={`Foto de perfil de Sabrina Porfilia`}
+              />
+
+              <div className="col-span-2">
+                <h2 className="text-base font-bold leading-6 tracking-tight text-gray-950">
+                  Sabrina Porfilia
+                </h2>
+                <p className="text-sm font-semibold leading-10">
+                  FullStack Developer
+                </p>
+                <div className="flex justify-start">
+                  <a href="https://www.linkedin.com/in/sabrinaporfilia/" target="_blank">
+                    <LinkedinLogo size={33} weight='bold' color='#0369a1' />
+                  </a>
+                  <a href="https://github.com/Sabrinaporfilia" target="_blank">
+                    <GithubLogo size={33} weight='bold' color='#4b5563' />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className="grid grid-cols-3 items-center px-3 py-2">
+              <img
+                className="h-22 w-24 rounded-full border-2 border-[#f3f4f6]"
+                src={tainaraPerfil} alt={`Foto de perfil de Tainara Mello`}
+              />
+
+              <div className="col-span-2">
+                <h2 className="text-base font-bold leading-6 tracking-tight text-gray-950">
+                  Tainara Mello
+                </h2>
+                <p className="text-sm font-semibold leading-10">
+                  FullStack Developer
+                </p>
+                <div className="flex justify-start">
+                  <a href="https://www.linkedin.com/in/tainaraamello/" target="_blank">
+                    <LinkedinLogo size={33} weight='bold' color='#0369a1' />
+                  </a>
+                  <a href="https://github.com/taimello" target="_blank">
+                    <GithubLogo size={33} weight='bold' color='#4b5563' />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className="grid grid-cols-3 items-center px-3 py-2">
+              <img
+                className="h-22 w-24 rounded-full border-2 border-[#f3f4f6]"
+                src={taisPerfil} alt={`Foto de perfil de Tais Salis`}
+              />
+
+              <div className="col-span-2">
+                <h2 className="text-base font-bold leading-6 tracking-tight text-gray-950">
+                  Tais Salis
+                </h2>
+                <p className="text-sm font-semibold leading-10">
+                  FullStack Developer
+                </p>
+                <div className="flex justify-start">
+                  <a href="https://www.linkedin.com/in/taisluiza/" target="_blank">
+                    <LinkedinLogo size={33} weight='bold' color='#0369a1' />
+                  </a>
+                  <a href="https://github.com/Taisluiza" target="_blank">
+                    <GithubLogo size={33} weight='bold' color='#4b5563' />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div className="grid grid-cols-3 items-center px-3 py-2">
+              <img
+                className="h-22 w-24 rounded-full border-2 border-[#f3f4f6]"
+                src={thayPerfil} alt={`Foto de perfil de Thayron Nogueira`}
+              />
+
+              <div className="col-span-2">
+                <h2 className="text-base font-bold leading-6 tracking-tight text-gray-950">
+                  Thayron Nogueira
+                </h2>
+                <p className="text-sm font-semibold leading-10">
+                  FullStack Developer
+                </p>
+                <div className="flex justify-start">
+                  <a href="https://www.linkedin.com/in/thayron-nogueira-954139280/" target="_blank">
+                    <LinkedinLogo size={33} weight='bold' color='#0369a1' />
+                  </a>
+                  <a href="https://github.com/thayrun" target="_blank">
+                    <GithubLogo size={33} weight='bold' color='#4b5563' />
+                  </a>
+                </div>
+              </div>
+            </div>
+
           </ul>
         </div>
       </section>
-        </>
-    )
+    </>
+  )
 }
 
 export default Sobre;
